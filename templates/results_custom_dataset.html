@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dataset Sentiment Analysis Results</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        text-align: center;
+    }
+    .container {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 20px;
+    }
+
+    .container2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .plot-image {
+        max-width: 500px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .message {
+        font-style: italic;
+        color: #999;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f5f5f5;
+    }
+
+        .btn-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .btn-submit,.back-link{
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      border: none;
+      margin: 5px;
+      font-size: 14px;
+      width: auto
+    }
+    .back-link {
+      padding: 7px 20px;
+    }
+    .btn-submit:hover{
+      background-color: #4CBB17;
+    }
+    .back-link:hover {
+      background-color: #ff0000;
+    }
+
+    </style>
+</head>
+<body>
+<h1>Dataset Sentiment Analysis Results</h1>
+<h2>Topic: {{ keyword }}</h2>
+<div class="container2">
+    <div class="container text-center">
+        <img src="data:image/png;base64,{{ dataset_pie_chart_image }}" alt="Sentiment Analysis Results" class="plot-image">
+    </div>
+    <div class="container text-center">
+        <img src="data:image/png;base64,{{ dataset_scatter_plot_image }}" alt="Sentiment Analysis Results" class="plot-image">
+    </div>
+</div>
+<div>
+    <h2>Most Positive Sentences</h2>
+    {% if top_positive_sentences.empty %}
+    <p class="message">No positive sentences found</p>
+    {% else %}
+    <table class="tweet-table">
+        <thead>
+        <tr>
+            <th>Sentence</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for index, row in top_positive_sentences.iterrows() %}
+        <tr>
+            <td>{{ row.text }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+<div>
+    <h2>Most Negative Sentences</h2>
+    {% if top_negative_sentences.empty %}
+    <p class="message">No negative sentences found</p>
+    {% else %}
+    <table class="tweet-table">
+        <thead>
+        <tr>
+            <th>Sentence</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for index, row in top_negative_sentences.iterrows() %}
+        <tr>
+            <td>{{ row.text }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</div>
+<div class="btn-group">
+            <a href="{{ url_for('index') }}" class="back-link">Back to Main Page</a>
+        </div>
+</body>
+</html>

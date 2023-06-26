@@ -1,0 +1,10 @@
+tweepy
+pymongo
+vaderSentiment
+numpy
+flask
+matplotlib
+pandas
+pyspark
+google-api-python-client
+nltk
