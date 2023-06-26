@@ -8,7 +8,7 @@ This project focuses on developing a data processing system for analyzing social
 
 ---
 
-##### Technologies
+#### Technologies
 
 + Spark
 + MongoDB
@@ -17,9 +17,20 @@ This project focuses on developing a data processing system for analyzing social
 
 ---
 
-##### Architecture
+#### Architecture
 
 ![Alt Text](readme_files/diagram.png)
 
 
 ---
+
+#### How to run
+
+The project comes with a `docker-compoe.yml` that you can use to create the image and run the container.
+```bash0
+docker-compose build # creation of the image (it might take some minutes)
+docker-compose up   # running the container
+```
+
+Once it is done, you can navigate to http://127.0.0.1:5000/ using your browser.
+and from there the interface will guide you.
