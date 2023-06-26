@@ -19,7 +19,7 @@ This project focuses on developing a data processing system for analyzing social
 
 ##### Architecture
 
-
+![Alt Text](readme_files/diagram.png)
 
 
 ---
