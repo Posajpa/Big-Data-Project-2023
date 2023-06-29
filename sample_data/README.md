@@ -4,23 +4,24 @@ This folder contains three sample datasets in CSV, JSON, and TXT formats, showca
 
 ## Dataset 1: sample.csv
 
-- Description: This dataset provides a collection of tweets about the us airline in February 2015.
+- Description: This dataset provides a collection of tweets about US Airlines in February 2015.
 - Format: CSV (Comma-Separated Values)
-- Recommended Keywords: "americanair", "americanair", "usairways"
+- Recommended Keywords: "americanair", "virginamerica", "usairways"
 - Source: https://www.kaggle.com/datasets/crowdflower/twitter-airline-sentiment?resource=download
 
-## Dataset 2: SampleData.json
+## Dataset 2: sample.json
 
-- Description: This dataset consists of information about different cities around the world, including their population, area, and important landmarks.
+- Description: This dataset consists of a collection of posts on Reddit, specifically in ptsd, anxiety, relationships, domesticviolence, and survivorsofabuse subreddits.
 - Format: JSON (JavaScript Object Notation)
-- Recommended Keywords: "city data," "population statistics," "landmark information"
+- Recommended Keywords: "dad", "friend"
+- Source: https://www.kaggle.com/datasets/ruchi798/stress-analysis-in-social-media
 
-## Dataset 3: SampleData.txt
+## Dataset 3: sample.txt
 
-- Description: This dataset contains a compilation of weather data recorded at different locations over a specific time period.
+- Description: This dataset provides a collection of tweets about Apple, Microsoft, Google and Twitter.
 - Format: TXT (Text File)
-- Recommended Keywords: "weather records," "climate data," "meteorological observations"
+- Recommended Keywords: "apple", "microsoft", "google", "twitter"
+- Source: https://github.com/zfz/twitter_corpus (Original file was turned into tt file)
 
 Please note that these datasets are provided as samples and may not reflect real-world data. They are intended to demonstrate the usage of our custom data approach. Feel free to explore and experiment with the data, using the recommended keywords as a starting point for your analyses.
 
-If you have any questions or need further assistance, please don't hesitate to reach out to us.
